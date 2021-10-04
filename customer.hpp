@@ -13,7 +13,9 @@ private:
 	Customer * nextCust;
 
 public:
-	float GetArrivalTime();
+	Customer(int arrivalTime);
+	void SetDepartureTime(float intervalTime);
+	int GetArrivalTime();
 };
 
 
