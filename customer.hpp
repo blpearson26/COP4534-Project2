@@ -6,16 +6,20 @@ using namespace std;
 
 class Customer {
 
-private:
+public:
+	Customer();
+	Customer(float arrivalTime);
 	float arrivalTime;
 	float startOfServiceTime; //currentWaitTime = startOfServiceTime - arrivalTime
 	float departureTime; //serviceTime = depatureTime - startOfServiceTime
 	Customer * nextCust;
-
-public:
-	Customer(int arrivalTime);
+	/*
 	void SetDepartureTime(float intervalTime);
-	int GetArrivalTime();
+	float GetArrivalTime();
+	Customer* GetNext();
+	void SetNext(Customer *newCust);
+	void PrintList();
+	void Insert(float data);*/
 };
 
 

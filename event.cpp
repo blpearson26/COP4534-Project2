@@ -5,10 +5,12 @@ Event::Event()
 
 }
 
-Event::Event(bool isDeparture, float time)
+Event::Event(bool isDeparture, float time, Customer cust)
 {
 	this->isDeparture = isDeparture;
 	this->time = time;
+	this->cust = cust;
+
 }
 bool Event::IsDeparture()
 {
@@ -21,4 +23,8 @@ void Event::SetTime(float time)
 float Event::GetTime()
 {
 	return this->time;
+}
+Customer Event::GetCust()
+{
+	return this->cust;
 }

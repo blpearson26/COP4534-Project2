@@ -25,6 +25,7 @@ public:
 	void PrintHeap();
 	void swap(Event *x, Event *y);
 	bool IsEmpty();
+	int GetSize();
 };
 
 #endif

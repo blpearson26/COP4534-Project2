@@ -84,9 +84,16 @@ void Heap::Heapify(int i)
 }
 void Heap::PrintHeap()
 {
+	if(this->size <= 0)
+	{
+		cout << "*** HEAP IS EMPTY ***" << endl;
+	}
 	for(int i = 0; i < size; ++i)
 	{
-		cout << "Heap Index " << i << ": " << heapArray[i].GetTime() << endl;
+		if(heapArray[i].IsDeparture() == false)
+			cout << "Heap Index " << i << ": " << heapArray[i].GetTime() << " | ARRIVAL" << endl;
+		else
+			cout << "Heap Index " << i << ": " << heapArray[i].GetTime() << " | Departure" << endl;
 	}
 }
 bool Heap::IsEmpty()
@@ -96,4 +103,8 @@ bool Heap::IsEmpty()
 
 	else
 		return false;
+}
+int Heap::GetSize()
+{
+	return this->size;
 }
