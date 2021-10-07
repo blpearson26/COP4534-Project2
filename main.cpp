@@ -103,6 +103,8 @@ void RunSim(Heap *h, float *time, Queue *q, string filename)
 	while(!h->IsEmpty())
 	{
 		ProcessNextEvent(h, q);
+		h->PrintHeap();
+		cout << "\n" << endl;
 
 		if(total != 0 && h->GetSize() <= maxServers + 1)
 			AddToHeap(h, time);
